@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/">WasteLess</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="isAuthenticated()"><a (click)="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div *ngIf="isAuthenticated() && showNotification" class="container alert alert-danger" role="alert">
+  You are wasting food based on your current goal! Consider donating...
+</div>
+<div *ngIf="isAuthenticated() && !showNotification" class="container alert alert-primary" role="alert">
+  There is no waste!
+</div>
+<router-outlet></router-outlet>

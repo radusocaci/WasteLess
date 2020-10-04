@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/wasteless
+    username: root
+    initialization-mode: never
+  jpa:
+    hibernate:
+      ddl-auto: update

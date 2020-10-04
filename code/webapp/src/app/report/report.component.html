@@ -1,0 +1,35 @@
+<h1 style="text-align: center; margin-bottom: 30px">WasteLess</h1>
+<div class="container my-2">
+  <div class="card">
+    <div class="card-body">
+      <div class="container my-5">
+        <h1>Report</h1>
+        <div class="col-md-10">
+          <span>Total items bought:</span>
+          <h3>{{report?.nrItemsBought}}</h3>
+          <span>Total calories consumed:</span>
+          <h3>{{report?.totalCaloriesConsumed}}</h3>
+          <span>Total calories wasted:</span>
+          <h3>{{report?.totalCaloriesWasted}}</h3>
+
+          <h2>Wasted items / quantity:</h2>
+
+          <table>
+            <thead>
+            <tr>
+              <th>Item name</th>
+              <th>Quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let item of report.wastedGroceryItems | keyvalue">
+              <td>{{item.key}}</td>
+              <td>{{item.value}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
