@@ -14,4 +14,5 @@ To keep the code as clean as possible and decouple controlers from the service l
 - Mediator
 - Builder
 
+For more information please check the [documentation](https://github.com/radusocaci/WasteLess/blob/main/Assignment_Analysis_and_Design_Document.docx).
 
